@@ -7,6 +7,6 @@ response = requests.get(url)
 if response.status_code == 200:
     with open("facilities.json", "w") as f:
         json.dump(response.json(), f, indent=2)
-    print("✅ Saved to facilities.json")
+    print("Saved to facilities.json")
 else:
-    print("❌ Request failed:", response.status_code)
+    print("Request failed:", response.status_code)
