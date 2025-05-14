@@ -10,7 +10,7 @@ CREATE OR REPLACE TABLE RAW.BC_PARKS_FINAL (
   facility_code STRING
 );
 
--- create procedure
+-- create procedure to insert the data and cleaned it up
 CREATE OR REPLACE PROCEDURE LOAD_BC_PARKS_FINAL()
 RETURNS STRING
 LANGUAGE SQL
