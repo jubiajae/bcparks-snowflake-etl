@@ -1,4 +1,4 @@
--- Create the final table with reordered fields
+-- Create the table  
 CREATE OR REPLACE TABLE RAW.BC_PARKS_FINAL (
   facility_id NUMBER,
   facility_name STRING,
@@ -10,7 +10,7 @@ CREATE OR REPLACE TABLE RAW.BC_PARKS_FINAL (
   facility_code STRING
 );
 
--- Load procedure
+-- create procedure
 CREATE OR REPLACE PROCEDURE LOAD_BC_PARKS_FINAL()
 RETURNS STRING
 LANGUAGE SQL
@@ -46,7 +46,7 @@ BEGIN
   FROM PUBLIC.BC_PARKS_RAW,
   LATERAL FLATTEN(input => data:data);
 
-  RETURN '✅ BC Parks Final Table Updated with cleaned fields';
+  RETURN 'BC Parks Table Updated';
 END;
 $$;
 
