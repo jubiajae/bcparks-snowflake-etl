@@ -33,7 +33,7 @@ Runs monthly at **6 AM PST on the 1st**:
 SCHEDULE = 'USING CRON 0 6 1 * * America/Los_Angeles'
 ```
 
-## 📂 Files Included
+## Files Included
 
 - `etl.sql` – Create table, procedure, task
 - `fetch_bcparks.py` – Optional script to automate fetch
